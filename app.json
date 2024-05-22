@@ -1,0 +1,124 @@
+{
+  "expo": {
+    "name": "react-native-study",
+    "slug": "react-native-study",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-font",
+        {
+          "fonts": [
+            {
+              "asset": "./assets/fonts/BeVietnamPro-Thin.ttf",
+              "fontWeight": 100
+            },
+            {
+              "asset": "./assets/fonts/BeVietnamPro-ThinItalic.ttf",
+              "fontWeight": 100,
+              "fontStyle": "italic"
+            },
+            {
+              "asset": "./assets/fonts/BeVietnamPro-ExtraLight.ttf",
+              "fontWeight": 200
+            },
+            {
+              "asset": "./assets/fonts/BeVietnamPro-ExtraLightItalic.ttf",
+              "fontWeight": 200,
+              "fontStyle": "italic"
+            },
+            {
+              "asset": "./assets/fonts/BeVietnamPro-Light.ttf",
+              "fontWeight": 300
+            },
+            {
+              "asset": "./assets/fonts/BeVietnamPro-LightItalic.ttf",
+              "fontWeight": 300,
+              "fontStyle": "italic"
+            },
+            {
+              "asset": "./assets/fonts/BeVietnamPro-Regular.ttf",
+              "fontWeight": 400
+            },
+            {
+              "asset": "./assets/fonts/BeVietnamPro-Italic.ttf",
+              "fontWeight": 400,
+              "fontStyle": "italic"
+            },
+            {
+              "asset": "./assets/fonts/BeVietnamPro-Medium.ttf",
+              "fontWeight": 500
+            },
+            {
+              "asset": "./assets/fonts/BeVietnamPro-MediumItalic.ttf",
+              "fontWeight": 500,
+              "fontStyle": "italic"
+            },
+            {
+              "asset": "./assets/fonts/BeVietnamPro-SemiBold.ttf",
+              "fontWeight": 600
+            },
+            {
+              "asset": "./assets/fonts/BeVietnamPro-SemiBoldItalic.ttf",
+              "fontWeight": 600,
+              "fontStyle": "italic"
+            },
+            {
+              "asset": "./assets/fonts/BeVietnamPro-Bold.ttf",
+              "fontWeight": 700
+            },
+            {
+              "asset": "./assets/fonts/BeVietnamPro-BoldItalic.ttf",
+              "fontWeight": 700,
+              "fontStyle": "italic"
+            },
+            {
+              "asset": "./assets/fonts/BeVietnamPro-ExtraBold.ttf",
+              "fontWeight": 800
+            },
+            {
+              "asset": "./assets/fonts/BeVietnamPro-ExtraBoldItalic.ttf",
+              "fontWeight": 800,
+              "fontStyle": "italic"
+            },
+            {
+              "asset": "./assets/fonts/BeVietnamPro-Black.ttf",
+              "fontWeight": 900
+            },
+            {
+              "asset": "./assets/fonts/BeVietnamPro-BlackItalic.ttf",
+              "fontWeight": 900,
+              "fontStyle": "italic"
+            }
+          ]
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
