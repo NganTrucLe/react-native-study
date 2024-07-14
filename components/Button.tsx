@@ -1,22 +1,42 @@
-import React from 'react';
 import { PropsWithChildren } from 'react';
 import { TouchableOpacity, Text } from 'react-native';
+import { useRouter } from 'expo-router';
 
 export interface ButtonProps {
-  variant?: 'contained' | 'outlined';
+  variant?: 'contained' | 'outlined' | 'text';
   onPress?: () => void;
   containerStyle?: string;
+  href?: string;
 }
 
-export function Button({ children, variant = 'contained', onPress, containerStyle }: PropsWithChildren & ButtonProps) {
-  const variantStyle = variant === 'contained' ? 'bg-primary text-white' : 'text-primary border border-primary';
-  const textStyle = variant === 'contained' ? 'text-white' : 'color-primary-700';
+export function Button({
+  children,
+  variant = 'contained',
+  onPress,
+  containerStyle,
+  href,
+}: PropsWithChildren & ButtonProps) {
+  const router = useRouter();
+  const variantStyle =
+    variant === 'contained'
+      ? 'bg-primary'
+      : variant === 'outlined'
+        ? 'text-primary border border-primary-700'
+        : 'text-primary';
+  const textStyle = variant === 'contained' ? 'text-white' : 'text-primary-dark';
   return (
     <TouchableOpacity
       className={`${variantStyle} rounded-xl h-12 w-full justify-center items-center ${containerStyle}`}
-      onPress={onPress}
+      onPress={() => {
+        if (onPress) {
+          onPress();
+        }
+        if (href) {
+          router.push(href);
+        }
+      }}
       activeOpacity={0.8}>
-      <Text className={`${textStyle} font-pregular`}>{children}</Text>
+      <Text className={`${textStyle} font-pmedium`}>{children}</Text>
     </TouchableOpacity>
   );
 }
